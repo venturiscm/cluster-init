@@ -22,7 +22,7 @@ GATEWAY_IP="$(sed -r 's/[0-9]+$/1/' <<< $STATIC_IP)"
 echo "$HOSTNAME" > /etc/hostname
 
 # Network cleanup
-#rm -f "$NETWORK_DIR/"*.cfg
+rm -f "$NETWORK_DIR/"*.cfg
 
 # Localhost generation
 echo "
