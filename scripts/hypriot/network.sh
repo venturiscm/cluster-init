@@ -36,4 +36,6 @@ iface eth0 inet static
 address "$STATIC_IP"
 gateway "$GATEWAY_IP"
 netmask 255.255.255.0
+
+domain_name_servers=8.8.8.8, 8.8.4.4
 " > "$NETWORK_DIR/eth0"
