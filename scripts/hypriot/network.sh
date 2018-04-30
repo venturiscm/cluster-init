@@ -40,4 +40,4 @@ iface eth0 inet static
 " > "$NETWORK_DIR/eth0"
 
 # Remove DHCP client (overrides interfaces)
-apt-get purge dhcpcd5
+apt-get purge -y dhcpcd5
