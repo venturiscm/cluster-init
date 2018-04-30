@@ -35,4 +35,6 @@ network:
      dhcp6: no
      addresses: ["$STATIC_IP/24"]
      gateway4: "$GATEWAY_IP"
+     nameservers:
+       addresses: [8.8.8.8, 8.8.4.4]
 " > "$NETWORK_DIR/enp1s0.yaml"
