@@ -33,9 +33,11 @@ iface lo inet loopback
 # eth0 generation
 echo "
 iface eth0 inet static
-address "$STATIC_IP"
-gateway "$GATEWAY_IP"
-netmask 255.255.255.0
-
-domain_name_servers=8.8.8.8, 8.8.4.4
+  address "$STATIC_IP"
+  gateway "$GATEWAY_IP"
+  netmask 255.255.255.0
+  dns-nameservers 8.8.8.8 8.8.4.4
 " > "$NETWORK_DIR/eth0"
+
+# Remove DHCP client (overrides interfaces)
+apt-get purge dhcpcd5
