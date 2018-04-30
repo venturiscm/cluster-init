@@ -32,6 +32,7 @@ iface lo inet loopback
 
 # eth0 generation
 echo "
+auto eth0
 iface eth0 inet static
   address "$STATIC_IP"
   gateway "$GATEWAY_IP"
